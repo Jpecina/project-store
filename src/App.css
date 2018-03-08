@@ -1,0 +1,145 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.App {
+  text-align: center;
+  height: 100vh;
+  width:100vw;
+  background-color: #37342E;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+ul{
+  list-style: none;
+  color: aliceblue;
+}
+
+
+/* main page and header styles */
+
+
+.header-container{
+  grid-row-start: 1;
+  grid-row-end: 12;
+  background-color: #3FC6CC;
+  display: flex;
+}
+.main-page-div{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.header-container{
+  grid-column-start: 1;
+  grid-column-end: 3; 
+  grid-row-start: 1;
+  grid-row-end: 13;
+}
+
+.nav-bar{
+  display: inline;
+
+}
+
+.image-container{
+  background-color: #6ADEE0;
+  grid-column-start: 3;
+  grid-column-end: 14;
+  grid-row-start: 1;
+  grid-row-end: 13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:  repeat(12,1fr);
+  grid-gap: 20px;
+}
+.large{
+  background-color: #6562F8;
+  grid-column-start: 2;
+  grid-column-end: 12;
+  grid-row-start: 2;
+  grid-row-end: 8;
+}
+.small-left{
+  background-color: #6562F8;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 8;
+  grid-row-end: 12;
+}
+.small-right{
+  background-color: #6562F8;
+  grid-column-start: 9;
+  grid-column-end: 12;
+  grid-row-start: 8;
+  grid-row-end: 12;
+}
+.medium{
+  background-color: #402C9E;
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 8;
+  grid-row-end: 12;
+}
+/* shop and item component styling */
+.item-container{
+  background-color: #F2F1EF;
+  border: 4px solid #0F0D0F; 
+  height: 200px;
+  width: 200px;
+}
+.shop-list{
+  background-color: #9A928A;
+}
+.shop-render{
+  height: 80vh;
+  width: 60vw;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #686358;
+}
+
+
+/* Add item styles */
+
+.add-item-form{
+  height:600px;
+  width: 600px;
+  background-color: #686358;
+}
+
+
+
+
+
