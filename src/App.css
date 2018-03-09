@@ -64,6 +64,8 @@ ul{
   grid-column-end: 3; 
   grid-row-start: 1;
   grid-row-end: 13;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr)
 }
 
 .nav-bar{
@@ -121,13 +123,23 @@ ul{
   background-color: #9A928A;
 }
 .shop-render{
-  height: 80vh;
-  width: 60vw;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #686358;
+  background-color: #1f1e1e;
+  grid-column-start: 5;
+  grid-column-end: 10;
+  grid-row-start: 7;
+  
+}
+.shop-page{
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+height: 100vh;
+width: 100vw;
+background-color: #686358;
+
 }
 
 
@@ -140,6 +152,35 @@ ul{
 }
 
 
+/* item info by id style */
+.main-item-container{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.item-info{
+  background-color: #402C9E;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 13;
+}
+.item-image{
+  background-color: #6562F8;
+  grid-column-start: 7;
+  grid-column-end: 12;
+  grid-row-start: 3;
+  grid-row-end: 11;
+}
 
-
-
+/* check out view */  
+.checkout-container{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  background-color: rgb(83, 149, 165);
+}

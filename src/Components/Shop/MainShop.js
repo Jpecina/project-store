@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import ShopItem from './ShopItem';
+import {Link} from 'react-router-dom';
+import Header from '../Header/Header';
 
 
 class Shop extends Component{
@@ -27,14 +29,21 @@ class Shop extends Component{
         const shopList = this.state.ShopItems.map((item,i)=>{
             return(
                 <div className="shop-list">
-                    <ShopItem itemName = {item.product_name} itemPrice = {item.product_price}/>
-                    <button onClick = {e=>this.addToCart(item)}>Quick Add</button>
-                    <button >More Info</button>        
+                    <Link to={`/item/${item.id}`} key ={i}>
+                        <ShopItem itemName = {item.product_name} itemPrice = {item.product_price}/>
+                    </Link>
+                        <button onClick = {e=>this.addToCart(item)}>Quick Add</button>
+                        <button >More Info</button>        
                 </div>
             )
         })
 
-        return <div className = "shop-render">{shopList}</div>
+        return (
+        <div className = "shop-page">
+        <Header/>
+            <div className="shop-render">{shopList}</div>
+        </div>
+        )
     }
 }
 

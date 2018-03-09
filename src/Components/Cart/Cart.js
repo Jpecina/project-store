@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
+import ShopItem from '../Shop/ShopItem'
 
 class Cart extends Component{
     constructor(){
@@ -31,13 +32,8 @@ class Cart extends Component{
         else {
             cartList = cartItems.map((item, i) => {
                 return ( 
-                <div key = {i} className="checkOut-item-main-div">
-                    <h1 > 
-                    {item.product_name} 
-                    </h1>
-                    <h1>
-                    {item.product_price}
-                    </h1> 
+                <div key = {i} className="checkout-item-main-div">
+                    <ShopItem itemName = {item.product_name} itemPrice = {item.product_price}/>
                     <button onClick = {() => {
                     this.deleteItem(item.id)}}>Delete</button> 
                 </div> 
